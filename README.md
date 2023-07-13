@@ -1,17 +1,19 @@
-## Getting Started
+## Установка и настройка
 
-First, run the development server:
+Сначала нужно скачать исходный код приложения либо через архивб либо с помощью git по ссылке https://github.com/Achimenes-freeman/app-fabric.git
+
+После скачивания вайлов нужно открыть папку с приложением в IDE либо открыть через терминал.
+
+Затем нужно ввести команду для установки всез зависимостей на локальный компьютер:
+
+```bash
+npm install
+# or
+npm i
+```
+после успешной установки всех пакетов поребуется ввести в терминале команду для запуска приложения в браузере:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Откройте ссылку [http://localhost:3000](http://localhost:3000) в вашем браузере и начните использовать приложение)
