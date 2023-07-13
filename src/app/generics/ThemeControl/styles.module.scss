@@ -1,0 +1,29 @@
+.ThemeControl {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: var(--main-card-color);
+
+  cursor: pointer;
+
+  transition: all 0.2s linear;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  & svg {
+    width: 70%;
+    height: 70%;
+    fill: var(--main-text-color);
+  }
+}

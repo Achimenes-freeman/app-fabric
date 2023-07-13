@@ -1,20 +1,39 @@
-import Image from "next/image";
+import cn from "classnames";
+import { CheckIcon } from "../../generics/CheckIcon/CheckIcon";
+import { DeleteIcon } from "../../generics/DeleteIcon/DeleteIcon";
+import { useDispatch } from "react-redux";
+import { changeCompletion, deleteTask } from "@/lib/slices/toDoSlice";
+
 import styles from "./styles.module.scss";
 
-import checkImg from "../../../assets/icons/check-solid.svg";
-
 export const Task = (props) => {
-  const { id, title, description, isDone } = props;
+  const dispatch = useDispatch();
+
+  const { id, title, isDone } = props;
 
   return (
-    <div className={styles.Task} id={id}>
+    <div className={cn(styles.Task, isDone && styles.isDone)} id={id}>
       <div className={styles.taskInfo}>
         <h4 className={styles.title}>{title}</h4>
       </div>
 
+      <button
+        className={styles.deleteButton}
+        type="button"
+        onClick={() => {
+          dispatch(deleteTask(id)); //обработчик удаления выбранной задачи из списка задач
+        }}
+      >
+        <DeleteIcon />
+      </button>
+
       <div className={styles.checkbox}>
-        <label className={styles.checkboxMask} htmlFor={`checkbox-${id}`}>
-          <Image className={styles.checkIcon} src={checkImg} alt="check" />
+        <label
+          className={cn(styles.checkboxMask, isDone && styles.checked)}
+          htmlFor={`checkbox-${id}`}
+        >
+          {/* добавление иконки check в checkbox для выполненной задачи*/}
+          {isDone && <CheckIcon />}{" "}
         </label>
         <input
           id={`checkbox-${id}`}
@@ -22,9 +41,7 @@ export const Task = (props) => {
           type="checkbox"
           defaultChecked={isDone}
           onChange={(e) => {
-            e.target.previousElementSibling.classList.toggle(
-              `${styles.checked}`
-            );
+            dispatch(changeCompletion(id)); //Обработчик изменеия состояния выполненности
           }}
         />
       </div>

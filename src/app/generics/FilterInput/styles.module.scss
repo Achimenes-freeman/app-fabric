@@ -1,0 +1,20 @@
+.radioInput {
+  display: none;
+}
+
+.label {
+  display: block;
+
+  padding: 0.3em 0.6em;
+
+  background-color: var(--main-card-color);
+  border-radius: 4px;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.active {
+  background-color: var(--active-filter-bg);
+  color: var(--active-filter-text);
+}

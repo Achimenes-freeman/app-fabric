@@ -1,0 +1,79 @@
+.AddForm {
+  width: 100%;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  background-color: var(--main-card-color);
+
+  border-radius: 8px;
+
+  color: var(--main-text-color);
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.addInput {
+  display: inline-block;
+  width: 100%;
+
+  padding: 0.4em 0.8em;
+  margin-right: 20px;
+
+  border: 1px solid #794fda62;
+  border-radius: 4px;
+
+  font-size: 1.2rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #bebebe;
+  }
+}
+
+.button {
+  display: inline-block;
+  min-width: 120px;
+  height: 100%;
+  padding: 0.4em 0.8em;
+
+  background-color: var(--main-text-color);
+  border: 1px solid var(--main-text-color);
+  border-radius: 0.25em;
+
+  font-size: 1.2rem;
+  color: #fff;
+
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+
+  outline: 20px solid transparent;
+  outline-offset: 10px;
+
+  &:hover {
+    outline-offset: -5px;
+    outline: 2px solid #e8d8fc;
+    border-radius: 0.7em;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    outline: none;
+    cursor: auto;
+
+    &:hover {
+      outline: none;
+      border-radius: 0.25em;
+    }
+  }
+}

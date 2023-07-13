@@ -1,3 +1,18 @@
 .ToDoApp {
+  min-height: 100vh;
+  max-width: 1280px;
   padding: 20px 30px;
+  margin: 0 auto;
+
+  // background-color: var(--main-background-color);
+}
+
+.wrapper {
+  width: 100%;
+  background-color: var(--main-background-color);
+}
+
+.missTasksTitle {
+  color: var(--main-text-color);
+  font-size: 3rem;
 }

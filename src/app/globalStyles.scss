@@ -12,6 +12,23 @@ html {
 
 body {
   min-height: 100vh;
+}
 
-  color: #303030;
+.lightTheme {
+  --main-card-color: #e9e9e9;
+  --main-text-color: #784fda;
+  --main-background-color: #fff;
+  --checkbox-bg: #fff;
+  --checkbox-border: #909090;
+  --active-filter-bg: #784fda;
+  --active-filter-text: #fff;
+}
+.darkTheme {
+  --main-card-color: #393149;
+  --main-text-color: #9068ee;
+  --main-background-color: #252129;
+  --checkbox-bg: #555555;
+  --checkbox-border: #9068ee;
+  --active-filter-bg: #fff;
+  --active-filter-text: #9068ee;
 }
